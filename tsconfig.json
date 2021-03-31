@@ -4,13 +4,14 @@
         "baseUrl": ".",
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "outDir": "src/ts-out/",
         "paths": {
             "*": ["./*"],
-            "src/*": ["./src/*"]
+            "src/*": ["./src/*.ts"]
         },
         "types": ["node", "supertest", "jest"]
     },
     "include": [
-        "./tests/**/*.ts"
+        "./src/**/*.ts"
     ]
 }
