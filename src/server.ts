@@ -8,7 +8,7 @@ const expressPlayground = require("graphql-playground-middleware-express")
  
 // Create a context for holding contextual data (db info in this case)
 const context = async () => {
-  const db = await new DataBase().startDatabase();
+  const db = await DataBase.startDatabase();
  
   return { db };
 };

@@ -6,7 +6,7 @@ let database = null;
 
 const mongo = new MongoMemoryServer();
 
-export default class Database {
+class Database {
   async startDatabase() {
     const mongoDBURL = await mongo.getUri();
     const connection = await MongoClient.connect(mongoDBURL, {
@@ -27,3 +27,5 @@ export default class Database {
     await mongo.stop();
   }
 }
+
+export default new Database();
