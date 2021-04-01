@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx jest",
     "compile": "npx tsc",
-    "start": "npm run compile && npx run node src/ts-out/index.js",
+    "start": "npm run compile && npx node src/ts-out/index.js",
     "test:api:generateReport": "npx mocha --config test/api/config/.mocharc.json test/api/specs/*.ts --reporter mochawesome --reporter-options reportDir=./test/api/report",
     "lint": "npx eslint 'test/**/*.ts'",
     "lint:fix": "npx eslint 'test/**/*.ts' --fix"
