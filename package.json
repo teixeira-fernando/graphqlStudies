@@ -19,11 +19,12 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
     "graphql-playground-middleware-express": "^1.7.22",
+    "jest-html-reporter": "^3.3.0",
     "mongodb": "^3.6.5",
     "mongodb-memory-server": "^6.9.6",
-    "typescript": "^4.1.5",
     "ts-node": "^9.1.1",
-    "tsconfig-paths": "^3.9.0"
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
