@@ -2,13 +2,13 @@ const express = require("express");
 const { graphqlHTTP } = require('express-graphql');
 const schema = require("./schema");
 const resolvers = require("./resolvers");
-const { startDatabase } = require("./database");
+import DataBase from './database';
 const expressPlayground = require("graphql-playground-middleware-express")
   .default;
  
 // Create a context for holding contextual data (db info in this case)
 const context = async () => {
-  const db = await startDatabase();
+  const db = await new DataBase().startDatabase();
  
   return { db };
 };
