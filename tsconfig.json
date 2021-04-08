@@ -1,15 +1,32 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "baseUrl": ".",
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "outDir": "src/ts-out/",
+        "module": "commonjs",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es2016",  // or newer if your node.js version supports this
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "skipLibCheck": true,
+      "declaration": false,
+      "noFallthroughCasesInSwitch": true,
+      "composite": false,
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "lib": ["dom", "es2016", "esnext.asynciterable"],
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "strict": false,
+      "experimentalDecorators": true,
+      "outDir": "dist",
         "paths": {
             "*": ["./*"],
             "src/*": ["./src/*.ts"]
         },
-        "types": ["node", "supertest", "jest"]
+        "types": ["node", "supertest", "jest", "graphql"]
     },
     "include": [
         "./src/**/*.ts"
