@@ -15,7 +15,7 @@ describe('the query returnSingleCategory(id: string)´', () => {
       .expect('Content-Type', /json/)
       .expect(200)
       .end((err, res) => {
-        if (err) return done(err);
+        expect(err).toBeNull();
         // console.log(res.body);
         expect(res.body.data.returnSingleCategory).toBeInstanceOf(Object);
         expect(res.body.data.returnSingleCategory.id).toEqual(

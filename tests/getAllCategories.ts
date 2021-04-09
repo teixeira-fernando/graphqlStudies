@@ -13,7 +13,7 @@ describe('the query ´categories´', () => {
       .set('Accept', 'application/json')
       .expect(200)
       .end((err: any, res: any) => {
-        if (err) return done(err);
+        expect(err).toBeNull();
         // console.log(res.body);
         expect(res.body.data.returnAllCategories).toBeInstanceOf(Array);
         expect(res.body.data.returnAllCategories.length).toBeGreaterThan(3);
