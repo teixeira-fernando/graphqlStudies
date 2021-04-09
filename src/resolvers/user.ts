@@ -3,7 +3,7 @@ import { User, UserModel } from "../entities/User";
 // import { CartInput } from "./types/cart-input"
 
 @Resolver()
-export class UserResolver {
+export default class UserResolver {
 
     @Query(_returns => User, { nullable: false})
     async returnSingleUser(@Arg("id") id: string){

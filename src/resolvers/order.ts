@@ -3,7 +3,7 @@ import { Order, OrderModel } from "../entities/Order";
 // import { CartInput } from "./types/cart-input"
 
 @Resolver()
-export class OrderResolver {
+export default class OrderResolver {
 
     @Query(_returns => Order, { nullable: false})
     async returnSingleOrder(@Arg("id") id: string){

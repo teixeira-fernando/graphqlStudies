@@ -5,7 +5,7 @@ import {  Categories, CategoriesModel } from "../entities/Categories";
 
 
 @Resolver(_of => Product)
-export class ProductResolver {
+export default class ProductResolver {
 
     @Query(_returns => Product, { nullable: false})
     async returnSingleProduct(@Arg("id") id: string){

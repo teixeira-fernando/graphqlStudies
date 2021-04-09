@@ -3,7 +3,7 @@ import { Cart, CartModel } from "../entities/Cart";
 // import { CartInput } from "./types/cart-input"
 
 @Resolver()
-export class CartResolver {
+export default class CartResolver {
 
     @Query(_returns => Cart, { nullable: false})
     async returnSingleCart(@Arg("id") id: string){

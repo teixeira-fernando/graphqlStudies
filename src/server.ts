@@ -5,16 +5,17 @@ import mongoose from "mongoose";
 import * as path from "path";
 
 // resolvers
-import { UserResolver } from "./resolvers/user";
-import { ProductResolver } from "./resolvers/products";
-import { CategoriesResolver } from "./resolvers/categories";
-import { CartResolver } from "./resolvers/cart";
-import { OrderResolver } from "./resolvers/order";
+import UserResolver from "./resolvers/user";
+import ProductResolver from "./resolvers/products";
+import CategoriesResolver from "./resolvers/categories";
+import CartResolver from "./resolvers/cart";
+import OrderResolver from "./resolvers/order";
 
 async function startApolloServer() {
   mongoose.connect("mongodb://localhost:27017/graphql-studies", {
     useNewUrlParser: true,
   });
+
 
   // build TypeGraphQL executable schema
   const schema = await buildSchema({

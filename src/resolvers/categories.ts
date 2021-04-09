@@ -3,7 +3,7 @@ import { Categories, CategoriesModel } from "../entities/Categories";
 import { CategoriesInput } from "./types/categories-input"
 
 @Resolver()
-export class CategoriesResolver {
+export default class CategoriesResolver {
 
     @Query(_returns => Categories, { nullable: false})
     async returnSingleCategory(@Arg("id") id: string){
