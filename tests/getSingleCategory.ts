@@ -1,13 +1,7 @@
-// import Database from "../src/database";
-
 require('dotenv').config();
 const request = require('supertest');
 
 const requestContainer = request(process.env.API_BASEURL);
-
-// afterAll(async () => {
-//   // await Database.stopDatabase();
-// });
 
 describe('the query returnSingleCategory(id: string)´', () => {
   test('should return a single category correspondent to the id', async (done) => {
@@ -36,7 +30,8 @@ describe('the query returnSingleCategory(id: string)´', () => {
     requestContainer
       .post('')
       .send({
-        query: "{ returnSingleCategory(name: \"Electronics\"){ id, name, description} }",
+        query:
+          '{ returnSingleCategory(name: "Electronics"){ id, name, description} }',
       })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
