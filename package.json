@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx jest",
     "compile": "npx tsc",
-    "prestart_OLD": "mongorestore --db users-posts-graphql --collection User --drop ./tests/data/users.bson",
+    "prestart": "mongorestore --db graphql-studies --dir=./tests/data/ --drop",
     "start": "npm run compile && npx node dist/server.js",
     "test:api:generateReport": "npx mocha --config test/api/config/.mocharc.json test/api/specs/*.ts --reporter mochawesome --reporter-options reportDir=./test/api/report",
     "lint": "npx eslint '**/*.ts'",
